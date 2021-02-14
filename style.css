@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #202121;
+}
+
+.card {
+    margin: 120px auto;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 180px;
+    position: relative;
+    align-items: center;
+    background-color: #545E66;
+    box-shadow: 5px 4px 0px rgba(0,0,0,0.3);
+    margin-top: 180px;
+
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100px;
+    border: 340px solid #0091d8;
+    border-top: 80px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 70px solid transparent;
+    filter: drop-shadow(5px 4px 0px rgba(0,0,0,0.3));
+
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-top: -50px;
+    margin-left: -60px;
+    border: 380px solid #133A5B;
+    border-top: 130px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 150px solid transparent;
+    filter: drop-shadow(5px 4px 0px rgba(0,0,0.3));
+    animation: rotate 5s infinite;
+}
+
+
+@keyframes rotate {
+    10% {
+        transform: rotate(1deg);
+    }
+    
+    80% {
+        transform: rotate(-2deg);
+    }
+}
+
+p {
+    position: absolute;
+    z-index: 200;
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin-left: -210px;
+    margin-top: -80px;
+    letter-spacing: 2px;
+}
+
+.card p:nth-child(2) {
+    opacity: 0.6;
+    font-size: 1rem;
+    margin-left: -195px;
+    margin-top: 3px;
+}
+
+.icon {
+    position: relative;
+    z-index: 100;
+    color: #fff;
+    margin-left: 260px;
+    margin-top: 120px;
+    display: flex;
+    font-size: 1.9rem;
+}
+
+i {
+    padding-left: 20px;
+    cursor:pointer;
+}
+
+
+i:hover {
+    opacity: 0.7;
+}
+
+div.button {
+    margin-top: 170px;
+    margin-left: 56%;
+    
+    
+}
+
+div.button p {
+    background-image: linear-gradient(to right, #283048 0%, #859398 50%, #283048 100%);
+    padding: 12px 20px;
+    text-align: center;
+    transition: 0.7s;
+    border-radius: 15px;
+    background-size: 200% auto;
+    box-shadow: 0 0 5px #ddd;
+    font-size: 1em;
+    cursor:pointer;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.3px;
+}
+
+div.button p:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
